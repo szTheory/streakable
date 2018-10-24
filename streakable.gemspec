@@ -5,7 +5,7 @@ require 'streakable'
 
 Gem::Specification.new do |spec|
   spec.name          = "streakable"
-  spec.version       = Streakable::VERSION
+  spec.version       = "1.0"
   spec.authors       = ["szTheory, Garrett Martin"]
   spec.email         = ["szTheory@github.com"]
   spec.description   = %q{Easily track consecutive day streaks on your ActiveRecord models.}
