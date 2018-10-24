@@ -1,18 +1,15 @@
-module HasStreak
-  class Streak
-    def initialize(instance, association)
-      @instance = instance
-      @association = association
-    end
+class Streak
+  attr_reader :instance, :association
+  def initialize(instance, association)
+    @instance = instance
+    @association = association
+  end
 
-    def length
-      determine_consecutive_days
-    end
+  def length
+    determine_consecutive_days
+  end
 
-    private
-
-    attr_reader :association, :instance
-
+  private
     def days
       @days ||= instance.send(association).order("created_at DESC").pluck(:created_at).map(&:to_date).uniq
     end
@@ -33,5 +30,4 @@ module HasStreak
     def first_day_in_collection_is_today?
       days.first == Date.current
     end
-  end
 end

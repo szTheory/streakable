@@ -1,4 +1,4 @@
-require "has_streak"
+require "streakable"
 require "database_cleaner"
 require "support/database_cleaner"
 require "support/user"

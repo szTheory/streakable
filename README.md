@@ -1,12 +1,12 @@
-# HasStreak
+# Streakable
 
-Track streaks on your ActiveRecord models.
+Track consecutive day streaks on your ActiveRecord models. Fork of [garrettqmartin8/has_streak](https://github.com/garrettqmartin8/has_streak). This version has a different interface and more options.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'has_streak'
+    gem 'streakable'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install has_streak
+    $ gem install streakable
 
 ## Usage
 
@@ -26,13 +26,13 @@ class User < ActiveRecord::Base
 end
 ```
 
-I want to track how many days in a row that each user wrote a post. I just have to add <code>has_streak</code> to the model:
+I want to track how many days in a row that each user wrote a post. I just have to add <code>streakable</code> to the model:
 
 ```ruby
 class User < ActiveRecord::Base
   # ...
 
-  has_streak
+  include Streakable
 end
 ```
 
@@ -57,3 +57,7 @@ This gem assumes that the model you want to track has a <code>created_at</code> 
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## TODO
+
+* Automated spec suite and build badge from Travis CI

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe HasStreak::Streakable do
+describe Streakable do
   context "#streak" do
     let(:user) { User.create(name: "garrett") }
 
