@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Streakable::VERSION
   spec.authors       = ["szTheory, Garrett Martin"]
   spec.email         = ["szTheory@github.com"]
-  spec.description   = %q{Easily track streaks on your ActiveRecord models.}
-  spec.summary       = %q{Easily track streaks on your ActiveRecord models.}
+  spec.description   = %q{Easily track consecutive day streaks on your ActiveRecord models.}
+  spec.summary       = %q{Easily track consecutive day streaks on your ActiveRecord models.}
   spec.homepage      = "https://github.com/szTheory/streakable"
   spec.license       = "MIT"
 
