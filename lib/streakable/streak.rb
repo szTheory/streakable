@@ -1,8 +1,9 @@
 class Streak
-  attr_reader :instance, :association
-  def initialize(instance, association)
+  attr_reader :instance, :association, :column
+  def initialize(instance, association, column: :created_at)
     @instance = instance
     @association = association
+    @column = column
   end
 
   def length
@@ -11,7 +12,7 @@ class Streak
 
   private
     def days
-      @days ||= instance.send(association).order("created_at DESC").pluck(:created_at).map(&:to_date).uniq
+      @days ||= instance.send(association).order("created_at DESC").pluck(column).map(&:to_date).uniq
     end
 
     def determine_consecutive_days
