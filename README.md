@@ -53,7 +53,7 @@ user.streak(:other_association)
 And you can change the column the streak is calculated on
 
 ```ruby
-user.streak(:user, :last_login_at)
+user.streak(:posts, :updated_at)
 ```
 
 This gem assumes that the model you want to track has a <code>created_at</code> timestamp.
