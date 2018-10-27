@@ -41,7 +41,7 @@ end
 Now I can display the user's streak:
 
 ```ruby
-user.streak(:posts) # => number of days in a row that this user wrote a post.
+user.streak(:posts) # => number of days in a row that this user wrote a post (defaults to created_at)
 ```
 
 The <code>streak</code> instance method can be called with any association:
