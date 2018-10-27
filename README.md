@@ -56,8 +56,6 @@ And you can change the column the streak is calculated on
 user.streak(:posts, :updated_at)
 ```
 
-This gem assumes that the model you want to track has a <code>created_at</code> timestamp.
-
 ## Contributing
 
 1. Fork it
@@ -65,7 +63,3 @@ This gem assumes that the model you want to track has a <code>created_at</code> 
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
-## TODO
-
-* Automated spec suite and build badge from Travis CI
