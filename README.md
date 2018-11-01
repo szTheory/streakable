@@ -41,7 +41,7 @@ end
 Now I can display the user's streak:
 
 ```ruby
-user.streak(:posts) # => number of days in a row that this user wrote a post (defaults to created_at)
+user.streak(:posts) # => number of days in a row that this user wrote a post (as determined by the created_at column, by default)
 ```
 
 The <code>streak</code> instance method can be called with any association:
@@ -54,6 +54,12 @@ And you can change the column the streak is calculated on
 
 ```ruby
 user.streak(:posts, :updated_at)
+```
+
+Don't penalize the current day being absent when determining streaks
+
+```ruby
+user.streak(:posts, except_today: true)
 ```
 
 ## Contributing

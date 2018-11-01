@@ -9,8 +9,8 @@ module Streakable
   end
 
   module InstanceMethods
-    def streak(association, column=:created_at)
-      Streak.new(self, association, column).length
+    def streak(association, column=:created_at, except_today: false)
+      Streak.new(self, association, column, except_today).length
     end
   end
 end

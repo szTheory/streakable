@@ -1,13 +1,23 @@
 class Streak
-  attr_reader :instance, :association, :column
-  def initialize(instance, association, column)
+  attr_reader :instance, :association, :column, :except_today
+  def initialize(instance, association, column, except_today)
     @instance = instance
     @association = association
     @column = column
+    # Don't penalize the current day being absent when determining streaks
+    @except_today = except_today
   end
 
   def length
-    determine_consecutive_days
+    @length ||= begin
+      val = 0
+      streak_map.each do |map_bool|
+        break if !map_bool
+        val += 1
+      end
+
+      val
+    end
   end
 
   private
@@ -15,20 +25,24 @@ class Streak
       @days ||= instance.send(association).order(column => :desc).pluck(column).map(&:to_date).uniq
     end
 
-    def determine_consecutive_days
-      streak = first_day_in_collection_is_today? ? 1 : 0
-      days.each_with_index do |day, index|
-        break unless first_day_in_collection_is_today?
-        if days[index+1] == day.yesterday
-          streak += 1
-        else
-          break
+    def streak_map
+      @streak_map || begin
+        days.map.with_index do |day, i|
+          if i == 0
+            streak_day(day)
+          else
+            days[i-1] == day.tomorrow
+          end
         end
       end
-      streak
     end
 
-    def first_day_in_collection_is_today?
-      days.first == Date.current
+    def streak_day(day)
+      if !except_today
+        day == Date.current
+      else
+        day == Date.current ||
+        day == Date.yesterday
+      end
     end
 end
