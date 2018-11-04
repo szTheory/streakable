@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
 end
 ```
 
-I want to track how many days in a row that each user wrote a post. I just have to add <code>streakable</code> to the model:
+I want to track how many days in a row that each user wrote a post. I just have to include <code>streakable</code> in the model:
 
 ```ruby
 class User < ActiveRecord::Base
@@ -50,13 +50,13 @@ The <code>streak</code> instance method can be called with any association:
 user.streak(:other_association)
 ```
 
-And you can change the column the streak is calculated on
+And you can change the column the streak is calculated on:
 
 ```ruby
 user.streak(:posts, :updated_at)
 ```
 
-Don't penalize the current day being absent when determining streaks
+Don't penalize the current day being absent when determining streaks (the User could write another Post before the day ends):
 
 ```ruby
 user.streak(:posts, except_today: true)
