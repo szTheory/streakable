@@ -6,7 +6,7 @@ describe Streakable do
 
     let(:user) { User.create }
 
-    context "when a user has no posts" do
+    context "user has no posts" do
       before { expect(user.posts).to be_empty }
       it { is_expected.to be 0 }
     end
@@ -18,7 +18,7 @@ describe Streakable do
     end
     let(:post_dates) { [] }
 
-    context "when a user posted on each of the last three days" do
+    context "user posted on each of the last three days" do
       let(:post_dates) { [2.days.ago, 1.day.ago, DateTime.current] }
 
       it "returns the streak" do
@@ -26,7 +26,35 @@ describe Streakable do
       end
     end
 
-    context "when a user didn't post today" do
+    context "user only has a post today" do
+      let(:post_dates) { [DateTime.current] }
+      before do
+        expect(user.posts.size).to eql(1)
+        expect(user.posts.first.created_at.to_date).to eql(Date.current)
+      end
+
+      it "returns the streak of 1" do
+        expect(subject).to eq(1)
+      end
+    end
+
+    context "user has streak today, and a longer streak before that" do
+      let(:post_dates) { [5.days.ago, 4.days.ago, 3.days.ago, 1.day.ago, DateTime.current] }
+
+      it "still returns the current streak" do
+        expect(subject).to eq(2)
+      end
+
+      context "with longest option" do
+        subject { user.streak(:posts, longest: true) }
+
+        it "returns the longer streak" do
+          expect(subject).to eq(3)
+        end
+      end
+    end
+
+    context "user didn't post today" do
       let(:post_dates) { [3.days.ago, 2.day.ago, 1.day.ago] }
 
       it "returns streak of zero" do

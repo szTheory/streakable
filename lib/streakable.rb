@@ -39,13 +39,15 @@ module Streakable
     # on the instance
     #
     # @param [Symbol] column the column on the association 
-    # that you want to calculate the streak against. defaults to created_at
+    # that you want to calculate the streak against.
     #
     # @param [Boolean] except_today whether to include today in the streak length 
     # calculation or not. If this is true, then you are assuming there 
     # is still time today for the streak to be extended
-    def streak(association, column=:created_at, except_today: false)
-      Streak.new(self, association, column, except_today).length
+    #
+    # @param [Boolean] longest if true, calculate the longest day streak in the sequence, not just the current one
+    def streak(association, column=:created_at, except_today: false, longest: false)
+      Streak.new(self, association, column, except_today, longest).length
     end
   end
 end

@@ -62,6 +62,12 @@ Don't penalize the current day being absent when determining streaks (the User c
 user.streak(:posts, except_today: true)
 ```
 
+Find the longest streak, not just the current one:
+
+```ruby
+user.streak(:posts, longest: true)
+```
+
 ## Contributing
 
 1. Fork it

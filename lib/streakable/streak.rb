@@ -21,6 +21,10 @@ class Streak
   # is still time today for the streak to be extended
   attr_reader :except_today
 
+  # longest if true, calculate the longest day streak in the sequence, 
+  # not just the current one
+  attr_reader :longest 
+
   # Creates a new Streak.
   # @param [ActiveRecord::Base] instance an ActiveRecord object instance
   #
@@ -33,24 +37,41 @@ class Streak
   # @param [Boolean] except_today whether to include today in the streak length 
   # calculation or not. If this is true, then you are assuming there 
   # is still time today for the streak to be extended
-  def initialize(instance, association, column, except_today)
+  #
+  # @param [Boolean] longest if true, calculate the longest day streak in the sequence, 
+  # not just the current one
+  def initialize(instance, association, column, except_today, longest)
     @instance = instance
     @association = association
     @column = column
     # Don't penalize the current day being absent when determining streaks
     @except_today = except_today
+    @longest = longest
   end
 
   # Calculate the length of this calendar day streak
   def length
     @length ||= begin
-      val = 0
+      return 0 if streak_map.first == false
+
+      streaks = []
+      streak = 0
       streak_map.each do |map_bool|
-        break if !map_bool
-        val += 1
+        if map_bool
+          streak += 1
+        elsif longest
+          streak += 1
+          streaks << streak
+        else
+          break
+        end
       end
 
-      val
+      if longest
+        streaks.sort.last
+      else
+        streak
+      end
     end
   end
 
