@@ -7,7 +7,19 @@
 # +Streak.new(user :posts, :created_at).length+ will tell you how many
 # consecutive days a given user created posts.
 class Streak
-  attr_reader :instance, :association, :column, :except_today
+  # the base ActiveRecord object instance for this streak calculation
+  attr_reader :instance,
+
+  # the AR association through which we want to grab a column to caculate a streak
+  attr_reader :association
+
+  # an AR column resolving to a date. the column that we want to calculate a calendar date streak against
+  attr_reader :column
+
+  # whether to include today in the streak length 
+  # calculation or not. If this is true, then you are assuming there 
+  # is still time today for the streak to be extended
+  attr_reader :except_today
 
   # Creates a new Streak.
   # @param [ActiveRecord::Base] an ActiveRecord object instance
