@@ -69,3 +69,7 @@ user.streak(:posts, except_today: true)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## License
+
+See the [LICENSE](https://github.com/szTheory/streakable/blob/master/LICENSE.txt) file.
