@@ -1,3 +1,11 @@
+# Represents a streak of calendar days as computed
+# by a date column on an association.
+#
+# @example
+#
+# So for example if you have a User that has_many :posts, then
+# +Streak.new(user :posts, :created_at).length+ will tell you how many
+# consecutive days a given user created posts.
 class Streak
   attr_reader :instance, :association, :column, :except_today
   def initialize(instance, association, column, except_today)
@@ -8,6 +16,7 @@ class Streak
     @except_today = except_today
   end
 
+  # Calculate the length of this calendar day streak
   def length
     @length ||= begin
       val = 0
