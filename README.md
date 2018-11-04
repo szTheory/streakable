@@ -2,7 +2,7 @@
 
 # Streakable
 
-Track consecutive day streaks on your ActiveRecord models. Fork of [has_streak](https://github.com/garrettqmartin8/has_streak) by Garrett Martin. This version has a different include interface and more options. GitHub project page: https://github.com/szTheory/streakable
+Track consecutive day streaks :calendar: on your ActiveRecord models. Fork of [has_streak](https://github.com/garrettqmartin8/has_streak) by Garrett Martin. This version has a different include interface and more options. GitHub project page: https://github.com/szTheory/streakable
 
 ## Installation
 
