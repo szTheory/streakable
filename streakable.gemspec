@@ -4,11 +4,13 @@ Gem::Specification.new do |spec|
   spec.name          = 'streakable'
   spec.version       = '0.1.0'
   spec.authors       = ['szTheory', 'Garrett Martin']
-  spec.email         = ['szTheory@github.com']
   spec.description   = %q{Track consecutive day streaks on ActiveRecord models.}
   spec.summary       = %q{Easily track consecutive day streaks on your Rails/ActiveRecord models.}
   spec.homepage      = 'https://sztheory.github.io/streakable/'
   spec.license       = 'MIT'
+  spec.metadata = {
+    "source_code_uri"   => "https://github.com/szTheory/streakable",
+  }
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }

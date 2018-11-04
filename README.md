@@ -1,10 +1,8 @@
 [![Gem Version](https://badge.fury.io/rb/streakable.svg)](https://badge.fury.io/rb/streakable) [![Build Status](https://travis-ci.org/szTheory/streakable.svg?branch=master)](https://travis-ci.org/szTheory/streakable) [![Inline docs](http://inch-ci.org/github/szTheory/streakable.svg?branch=master)](http://inch-ci.org/github/szTheory/streakable) [![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/szTheory/streakable/blob/master/LICENSE.txt)
 
-# [Streakable](https://github.com/szTheory/streakable)
+# Streakable
 
-Track consecutive day streaks on your ActiveRecord models. Fork of [has_streak](https://github.com/garrettqmartin8/has_streak) by Garrett Martin. This version has a different include interface and more options.
-
-Project page: https://github.com/szTheory/streakable
+Track consecutive day streaks on your ActiveRecord models. Fork of [has_streak](https://github.com/garrettqmartin8/has_streak) by Garrett Martin. This version has a different include interface and more options. GitHub project page: https://github.com/szTheory/streakable
 
 ## Installation
 
