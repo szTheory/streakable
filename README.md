@@ -2,7 +2,7 @@
 
 # Streakable
 
-Track consecutive day streaks :calendar: on your ActiveRecord models. Fork of [has_streak](https://github.com/garrettqmartin8/has_streak) by Garrett Martin. This version has a different include interface and more options. GitHub project page: https://github.com/szTheory/streakable
+Ruby gem to track consecutive day streaks :calendar: on your Rails/ActiveRecord models. Fork of [has_streak](https://github.com/garrettqmartin8/has_streak) by Garrett Martin. This version has a different include interface and more options. GitHub project page: https://github.com/szTheory/streakable
 
 ## Installation
 
@@ -32,8 +32,6 @@ I want to track how many days in a row that each user wrote a post. I just have 
 
 ```ruby
 class User < ActiveRecord::Base
-  # ...
-
   include Streakable
 end
 ```
@@ -68,13 +66,20 @@ Find the longest streak, not just the current one:
 user.streak(:posts, longest: true)
 ```
 
+To get all of the streaks, not just the current one:
+
+```ruby
+user.streaks(:posts)
+```
+
 ## Contributing
 
 1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
+2. Create your feature branch (`git checkout -b feature/my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+4. Push to the branch (`git push origin feature/my-new-feature`)
+5. Make sure specs are passing (`bundle exec rspec`)
+6. Create new Pull Request
 
 ## License
 
