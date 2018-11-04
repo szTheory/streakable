@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['szTheory@github.com']
   spec.description   = %q{Track consecutive day streaks on ActiveRecord models.}
   spec.summary       = %q{Easily track consecutive day streaks on your Rails/ActiveRecord models.}
-  spec.homepage      = 'https://github.com/szTheory/streakable'
+  spec.homepage      = 'https://sztheory.github.io/streakable/'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
