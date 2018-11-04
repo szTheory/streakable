@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/szTheory/streakable.svg?branch=master)](https://travis-ci.org/szTheory/streakable)
+[![Gem Version](https://badge.fury.io/rb/streakable.svg)](https://badge.fury.io/rb/streakable) [![Build Status](https://travis-ci.org/szTheory/streakable.svg?branch=master)](https://travis-ci.org/szTheory/streakable) ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 # Streakable
 
