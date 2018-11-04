@@ -31,7 +31,7 @@ module Streakable
     end
   end
 
-  module InstanceMethods
+  module InstanceMethods # :nodoc:
     # Calculate a calendar streak. That is to say, the number of consecutive
     # days that exist for some date column, on an asociation with this object.
     # 
