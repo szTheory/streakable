@@ -8,7 +8,7 @@
 # consecutive days a given user created posts.
 class Streak
   # the base ActiveRecord object instance for this streak calculation
-  attr_reader :instance,
+  attr_reader :instance
 
   # the AR association through which we want to grab a column to caculate a streak
   attr_reader :association
