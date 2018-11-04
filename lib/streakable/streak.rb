@@ -22,15 +22,15 @@ class Streak
   attr_reader :except_today
 
   # Creates a new Streak.
-  # @param [ActiveRecord::Base] an ActiveRecord object instance
+  # @param [ActiveRecord::Base] instance an ActiveRecord object instance
   #
-  # @param [Symbol] a key representing the ActiveRecord association 
+  # @param [Symbol] association a key representing the ActiveRecord association 
   # on the instance
   #
-  # @param [Symbol] a key representing the column on the association 
+  # @param [Symbol] column a key representing the column on the association 
   # that you want to calculate the streak against
   #
-  # @param [Boolean] whether to include today in the streak length 
+  # @param [Boolean] except_today whether to include today in the streak length 
   # calculation or not. If this is true, then you are assuming there 
   # is still time today for the streak to be extended
   def initialize(instance, association, column, except_today)
