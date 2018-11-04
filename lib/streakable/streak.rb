@@ -1,8 +1,6 @@
 # Represents a streak of calendar days as computed
 # by a date column on an association.
 #
-# @example
-#
 # So for example if you have a User that has_many :posts, then
 # +Streak.new(user, :posts, :created_at).length+ will tell you how many
 # consecutive days a given user created posts.
@@ -21,18 +19,12 @@ class Streak
   # is still time today for the streak to be extended
   attr_reader :except_today
 
-  # Creates a new Streak.
+  # Creates a new Streak
+  # 
   # @param [ActiveRecord::Base] instance an ActiveRecord object instance
-  #
-  # @param [Symbol] association a key representing the ActiveRecord association 
-  # on the instance
-  #
-  # @param [Symbol] column a key representing the column on the association 
-  # that you want to calculate the streak against
-  #
-  # @param [Boolean] except_today whether to include today in the streak length 
-  # calculation or not. If this is true, then you are assuming there 
-  # is still time today for the streak to be extended
+  # @param [Symbol] association a key representing the ActiveRecord association on the instance
+  # @param [Symbol] column a key representing the column on the association that you want to calculate the streak against
+  # @param [Boolean] except_today whether to include today in the streak length calculation or not. If this is true, then you are assuming there is still time today for the streak to be extended
   def initialize(instance, association, column, except_today: false)
     @instance = instance
     @association = association
