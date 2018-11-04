@@ -8,6 +8,19 @@
 # consecutive days a given user created posts.
 class Streak
   attr_reader :instance, :association, :column, :except_today
+
+  # Creates a new Streak.
+  # @param [ActiveRecord::Base] an ActiveRecord object instance
+  #
+  # @param [Symbol] a key representing the ActiveRecord association 
+  # on the instance
+  #
+  # @param [Symbol] a key representing the column on the association 
+  # that you want to calculate the streak against
+  #
+  # @param [Boolean] whether to include today in the streak length 
+  # calculation or not. If this is true, then you are assuming there 
+  # is still time today for the streak to be extended
   def initialize(instance, association, column, except_today)
     @instance = instance
     @association = association
