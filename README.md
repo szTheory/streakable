@@ -2,7 +2,7 @@
 
 # Streakable
 
-Ruby gem to track consecutive day streaks :calendar: on your Rails/ActiveRecord models. Fork of [has_streak](https://github.com/garrettqmartin8/has_streak) by Garrett Martin. This version has a different include interface and more options. Requires Ruby >= 2.1 and ActiveRecord >= 3.0. GitHub project page: https://github.com/szTheory/streakable
+Ruby gem to track consecutive day streaks :calendar: on your Rails/ActiveRecord models. Hard fork of [has_streak](https://github.com/garrettqmartin8/has_streak) by Garrett Martin. with a different include interface and more features. Requires Ruby >= 2.1 and ActiveRecord >= 3.0. GitHub project page: https://github.com/szTheory/streakable
 
 ## Installation
 
