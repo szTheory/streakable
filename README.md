@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/streakable.svg)](https://badge.fury.io/rb/streakable) [![Build Status](https://travis-ci.org/szTheory/streakable.svg?branch=master)](https://travis-ci.org/szTheory/streakable) [![Inline docs](http://inch-ci.org/github/szTheory/streakable.svg?branch=master)](http://inch-ci.org/github/szTheory/streakable) [![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/szTheory/streakable/blob/master/LICENSE.txt)
+[![Gem Version](https://badge.fury.io/rb/streakable.svg)](https://badge.fury.io/rb/streakable) [![Build Status](https://travis-ci.org/szTheory/streakable.svg?branch=master)](https://travis-ci.org/szTheory/streakable) [![Coverage Status](https://coveralls.io/repos/github/szTheory/streakable/badge.svg?branch=master)](https://coveralls.io/github/szTheory/streakable?branch=master) [![Inline docs](http://inch-ci.org/github/szTheory/streakable.svg?branch=master)](http://inch-ci.org/github/szTheory/streakable) [![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/szTheory/streakable/blob/master/LICENSE.txt)
 
 # Streakable
 
