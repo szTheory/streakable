@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'streakable'
   spec.version       = '0.1.2'
   spec.authors       = ['szTheory', 'Garrett Martin']
-  spec.description   = %q{Track consecutive day streaks on ActiveRecord models.}
+  spec.description   = %q{Track consecutive day streaks on Rails/ActiveRecord models.}
   spec.summary       = %q{Easily track consecutive day streaks on your Rails/ActiveRecord model associations for a given date column.}
   spec.homepage      = 'https://sztheory.github.io/streakable/'
   spec.license       = 'MIT'
