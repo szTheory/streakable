@@ -1,3 +1,6 @@
+require 'coveralls'
+Coveralls.wear!
+
 require "streakable"
 require "database_cleaner"
 require "support/database_cleaner"
