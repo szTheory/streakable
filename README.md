@@ -77,7 +77,7 @@ user.streaks(:posts)
 ## Contributing
 
 1. Fork it
-2. Create your feature branch (`git checkout -b feature/my-new-feature`)
+2. Create your feature branch (`git checkout -b feature/my-new-feature`) or bugfix branch (`git checkout -b bugfix/my-helpful-bugfix`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin feature/my-new-feature`)
 5. Make sure specs are passing (`bundle exec rspec`)
