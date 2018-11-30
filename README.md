@@ -1,8 +1,6 @@
 [![Gem Version](https://badge.fury.io/rb/streakable.svg)](https://badge.fury.io/rb/streakable) [![Build Status](https://travis-ci.org/szTheory/streakable.svg?branch=master)](https://travis-ci.org/szTheory/streakable) [![Coverage Status](https://coveralls.io/repos/github/szTheory/streakable/badge.svg?branch=master)](https://coveralls.io/github/szTheory/streakable?branch=master) [![Inline docs](http://inch-ci.org/github/szTheory/streakable.svg?branch=master)](http://inch-ci.org/github/szTheory/streakable) [![Maintainability](https://api.codeclimate.com/v1/badges/cacc27fc37181c331918/maintainability)](https://codeclimate.com/github/szTheory/streakable/maintainability) [![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/szTheory/streakable/blob/master/LICENSE.txt) [![Gem](https://img.shields.io/gem/dt/streakable.svg)](https://rubygems.org/gems/streakable) [![GitHub stars](https://img.shields.io/github/stars/sztheory/streakable.svg?label=Stars&style=social)](https://github.com/szTheory/streakable)
 
-
-
-![Streakable](https://user-images.githubusercontent.com/28652/49295922-f3ec2500-f484-11e8-9c6f-d32efbc1bf46.png)
+![Streakable Logo](https://user-images.githubusercontent.com/28652/49296229-aa500a00-f485-11e8-8f13-51f2ad326e5c.png)
 
 Streakable is a Ruby gem to track consecutive day streaks :calendar: on your Rails/ActiveRecord models. Hard fork of [has_streak](https://github.com/garrettqmartin8/has_streak) by Garrett Martin with a different include interface and more features. Requires Ruby >= 2.1 and ActiveRecord >= 3.0.
 
