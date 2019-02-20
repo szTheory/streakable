@@ -22,7 +22,6 @@ describe Streakable do
       let(:post_dates) { [2.days.ago, 1.day.ago, DateTime.current] }
 
       it "returns the streak" do
-        # binding.pry
         expect(subject).to eq(posts.size)
       end
     end
