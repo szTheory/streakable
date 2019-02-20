@@ -29,7 +29,7 @@ describe Streakable do
     context "user only has a post today" do
       let(:post_dates) { [DateTime.current] }
       before do
-        expect(user.posts.size).to eql(1)
+        expect(user.posts.length).to eql(1)
         expect(user.posts.first.created_at.to_date).to eql(Date.current)
       end
 
@@ -136,7 +136,7 @@ describe Streakable do
     context "user only has a post today" do
       let(:post_dates) { [DateTime.current] }
       before do
-        expect(user.posts.size).to eql(1)
+        expect(user.posts.length).to eql(1)
         expect(user.posts.first.created_at.to_date).to eql(Date.current)
       end
 
@@ -148,7 +148,7 @@ describe Streakable do
     context "user only has a post yesterday" do
       let(:post_dates) { [DateTime.current.yesterday] }
       before do
-        expect(user.posts.size).to eql(1)
+        expect(user.posts.length).to eql(1)
         expect(user.posts.first.created_at.to_date).to eql(Date.current.yesterday)
       end
 

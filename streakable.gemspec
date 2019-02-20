@@ -17,14 +17,15 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'activerecord', '>= 3.0'
+  spec.add_runtime_dependency 'activerecord', '>= 3.2.22'
 
-  spec.add_development_dependency 'sqlite3', '~> 1.3.6'
-  spec.add_development_dependency 'rspec', '~> 3.8', '>= 3.8.0'
-  spec.add_development_dependency 'database_cleaner', '~> 1.7.0', '>= 1.7.0'
-  spec.add_development_dependency 'bundler', '~> 1.3', '>= 1.3'
-  spec.add_development_dependency 'rake', '~> 12.3', '>= 12.3.1'
-  spec.add_development_dependency 'pry', '~> 0.11', '>= 0.11.3'
+  spec.add_development_dependency 'appraisal', '~> 2.2', '>= 2.2.0'
+  spec.add_development_dependency 'bundler', '>= 1.3', '>= 1.3'
   spec.add_development_dependency 'coveralls', '~> 0.8', '>= 0.8.22'
+  spec.add_development_dependency 'database_cleaner', '~> 1.7.0', '>= 1.7.0'
+  spec.add_development_dependency 'pry', '~> 0.11', '>= 0.11.3'
+  spec.add_development_dependency 'rake', '~> 12.3', '>= 12.3.1'
+  spec.add_development_dependency 'rspec', '~> 3.8', '>= 3.8.0'
+  spec.add_development_dependency 'sqlite3', '~> 1.3.6'
   spec.add_development_dependency 'timecop', '~> 0.9', '>= 0.9.1'
 end

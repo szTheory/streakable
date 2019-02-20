@@ -3,6 +3,7 @@ Coveralls.wear!
 
 require "streakable"
 require "database_cleaner"
+require "pry"
 require "support/database_cleaner"
 require "support/user"
 require "support/post"
@@ -15,6 +16,7 @@ ActiveRecord::Schema.define do
 
   create_table :users, force: true do |t|
     t.string :name
+    t.timestamps
   end
 
   create_table :posts, force: true do |t|

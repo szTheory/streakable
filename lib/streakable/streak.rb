@@ -99,6 +99,10 @@ class Streak
 
   private
     def days
-      @days ||= instance.send(association).order(column => :desc).pluck(column).map(&:to_date).uniq
+      @days ||= begin
+        date_strings = instance.send(association).order(column => :desc).pluck(column)
+        dates = date_strings.map(&:to_date)
+        dates.sort.reverse.uniq
+      end
     end
 end
