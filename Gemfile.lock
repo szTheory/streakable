@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    streakable (0.1.2)
+    streakable (0.2.0)
       activerecord (>= 3.2.22)
 
 GEM
