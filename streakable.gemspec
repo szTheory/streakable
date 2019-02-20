@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'activerecord', '>= 3.0'
 
-  spec.add_development_dependency 'sqlite3', '~> 1.3', '>= 1.3.13'
+  spec.add_development_dependency 'sqlite3', '~> 1.4', '>= 1.4.0'
   spec.add_development_dependency 'rspec', '~> 3.8', '>= 3.8.0'
   spec.add_development_dependency 'database_cleaner', '~> 1.7.0', '>= 1.7.0'
   spec.add_development_dependency 'bundler', '~> 1.3', '>= 1.3'
