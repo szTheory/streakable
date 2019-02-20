@@ -2,7 +2,7 @@
 
 ![Streakable Logo](https://user-images.githubusercontent.com/28652/49296229-aa500a00-f485-11e8-8f13-51f2ad326e5c.png)
 
-Streakable is a Ruby gem to track consecutive day streaks :calendar: on your Rails/ActiveRecord models. Hard fork of [has_streak](https://github.com/garrettqmartin8/has_streak) by Garrett Martin with a different include interface and more features. Requires Ruby >= 2.1 and ActiveRecord >= 3.0.
+Streakable is a Ruby gem to track consecutive day streaks :calendar: on your Rails/ActiveRecord models. Hard fork of [has_streak](https://github.com/garrettqmartin8/has_streak) by Garrett Martin with a different include interface and more features. Requires Ruby >= 2.1 and ActiveRecord >= 3.2.22.
 
 [Github Project Page](https://github.com/szTheory/streakable)
 
