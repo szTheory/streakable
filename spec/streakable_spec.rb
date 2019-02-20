@@ -54,6 +54,22 @@ describe Streakable do
       end
     end
 
+    context "user has streak today, and a shorter streak before that" do
+      let(:post_dates) { [5.days.ago, 4.days.ago, 2.days.ago, 1.day.ago, DateTime.current] }
+
+      it "still returns the current streak" do
+        expect(subject).to eq(3)
+      end
+
+      context "with longest option" do
+        subject { user.streak(:posts, longest: true) }
+
+        it "still returns the longer streak" do
+          expect(subject).to eq(3)
+        end
+      end
+    end
+
     context "user didn't post today, but has a streak before that" do
       let(:post_dates) { [3.days.ago, 2.day.ago, 1.day.ago] }
       before { expect(post_dates.map(&:to_date)).to_not include(Date.current) }

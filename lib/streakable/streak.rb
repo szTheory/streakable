@@ -41,7 +41,9 @@ class Streak
     if streaks.empty?
       0
     elsif longest
-      streaks.sort.first.size
+      streaks.sort do |x, y|
+        y.size <=> x.size
+      end.first.size
     else
       streak = streaks.first
       if streak.include?(Date.current) || except_today && streak.include?(Date.yesterday)
