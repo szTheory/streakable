@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'activerecord', '>= 3.2.22'
 
   spec.add_development_dependency 'appraisal', '~> 2.2', '>= 2.2.0'
-  spec.add_development_dependency 'bundler', '~> 1.3', '>= 1.3'
+  spec.add_development_dependency 'bundler', '>= 1.3', '>= 1.3'
   spec.add_development_dependency 'coveralls', '~> 0.8', '>= 0.8.22'
   spec.add_development_dependency 'database_cleaner', '~> 1.7.0', '>= 1.7.0'
   spec.add_development_dependency 'pry', '~> 0.11', '>= 0.11.3'
