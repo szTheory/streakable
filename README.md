@@ -74,6 +74,10 @@ To get all of the streaks, not just the current one:
 user.streaks(:posts)
 ```
 
+## TODO
+
+* Fix N+1 queries
+
 ## Contributing
 
 1. Fork it
