@@ -24,10 +24,14 @@ matrix:
       gemfile: gemfiles/rails5.gemfile
     - rvm: 2.2.0
       gemfile: gemfiles/rails6.gemfile
+    - rvm: 2.3.0
+      gemfile: gemfiles/rails6.gemfile
     - rvm: 2.4.0
       gemfile: gemfiles/rails3.gemfile
     - rvm: 2.4.0
       gemfile: gemfiles/rails4.gemfile
+    - rvm: 2.4.0
+      gemfile: gemfiles/rails6.gemfile
     - rvm: 2.5.0
       gemfile: gemfiles/rails3.gemfile
     - rvm: 2.5.0
