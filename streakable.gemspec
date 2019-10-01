@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'pry', '~> 0.11', '>= 0.11.3'
   spec.add_development_dependency 'rake', '~> 12.3', '>= 12.3.1'
   spec.add_development_dependency 'rspec', '~> 3.8', '>= 3.8.0'
-  spec.add_development_dependency 'sqlite3', '>= 1.3.6'
+  spec.add_development_dependency 'sqlite3', '~> 1.3.6'
   spec.add_development_dependency 'timecop', '~> 0.9', '>= 0.9.1'
   spec.add_development_dependency 'activesupport'
   spec.add_development_dependency 'pry-coolline'
