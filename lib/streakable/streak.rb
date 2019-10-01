@@ -82,7 +82,6 @@ class Streak
 
       # consecutive day, the previous day was "tomorrow" 
       # relative to day (since we're date descending)
-      # binding.pry if i==1 
       elsif days[i-1] == (day+1.day)
         # push to existing streak
         streak << day
