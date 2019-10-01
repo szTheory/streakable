@@ -76,7 +76,7 @@ user.streaks(:posts)
 
 ## TODO
 
-* Fix N+1 queries
+* Add class methods/scopes for calculating streaks on records not in memory
 
 ## Contributing
 

@@ -25,6 +25,8 @@ GEM
     arel (9.0.0)
     coderay (1.1.2)
     concurrent-ruby (1.1.4)
+    coolline (0.5.0)
+      unicode_utils (~> 1.4)
     coveralls (0.8.22)
       json (>= 1.8, < 3)
       simplecov (~> 0.16.1)
@@ -42,6 +44,8 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    pry-coolline (0.2.5)
+      coolline (~> 0.5)
     rake (12.3.2)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
@@ -70,16 +74,19 @@ GEM
     tins (1.20.2)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    unicode_utils (1.4.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   appraisal (~> 2.2, >= 2.2.0)
   bundler (>= 1.3)
   coveralls (~> 0.8, >= 0.8.22)
   database_cleaner (~> 1.7.0, >= 1.7.0)
   pry (~> 0.11, >= 0.11.3)
+  pry-coolline
   rake (~> 12.3, >= 12.3.1)
   rspec (~> 3.8, >= 3.8.0)
   sqlite3 (~> 1.3.6)

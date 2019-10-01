@@ -1,6 +1,7 @@
 require 'coveralls'
 Coveralls.wear!
 
+require "active_support"
 require "streakable"
 require "database_cleaner"
 require "pry"

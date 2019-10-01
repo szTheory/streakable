@@ -38,15 +38,24 @@ class Streak
   # @param [Boolean] longest if true, calculate the longest day streak in the sequence, 
   # not just the current one
   def length(longest: false)
+    # no streaks
     if streaks.empty?
       0
+
+    # calculate the longest one?
     elsif longest
       streaks.sort do |x, y|
         y.size <=> x.size
       end.first.size
+
+    # default streak calculation
     else
+      # pull the first streak
       streak = streaks.first
-      if streak.include?(Date.current) || except_today && streak.include?(Date.yesterday)
+      
+      # either the streak includes today,
+      # or we don't care about today and it includes yesterday
+      if streak.include?(Date.current) || except_today && streak.include?(Date.current - 1.day)
         streak.size
       else
         0
@@ -73,7 +82,8 @@ class Streak
 
       # consecutive day, the previous day was "tomorrow" 
       # relative to day (since we're date descending)
-      elsif days[i-1] == day.tomorrow
+      # binding.pry if i==1 
+      elsif days[i-1] == (day+1.day)
         # push to existing streak
         streak << day
 
@@ -93,16 +103,25 @@ class Streak
         streaks << streak 
       end
     end
-
+   
     streaks
   end
+
+  # TODO: add class methods/scopes to calculate streaks, days
+  # scrap code from old method below:
+  # 
+  # date_strings = instance.send(association).order(column => :desc).pluck(column)
+  # dates = date_strings.map(&:to_date)
+  # dates.sort.reverse.uniq
 
   private
     def days
       @days ||= begin
-        date_strings = instance.send(association).order(column => :desc).pluck(column)
-        dates = date_strings.map(&:to_date)
-        dates.sort.reverse.uniq
+        instance.send(association).map do |x|
+          x.send(column).in_time_zone.to_date
+        end.sort do |x, y|
+          x <=> y
+        end.reverse.uniq
       end
     end
 end
