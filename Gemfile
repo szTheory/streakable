@@ -13,7 +13,7 @@ group :development, :test do
   gem 'pry'
   gem 'rake'
   gem 'rspec'
-  gem 'sqlite3', '~> 1.3.6'
+  gem 'sqlite3'
   gem 'timecop'
   gem 'activesupport'
   gem 'pry-coolline'
