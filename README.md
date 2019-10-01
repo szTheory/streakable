@@ -78,6 +78,13 @@ user.streaks(:posts)
 
 * Add class methods/scopes for calculating streaks on records not in memory
 
+## Specs
+To run the specs for the currently running Ruby version, run `bundle install` and then `bundle exec rspec`. To run specs for every supported version of ActionPack, run `bundle exec appraisal install` and then `bundle exec appraisal rspec`.
+
+## Gem release
+Make sure the specs pass, bump the version number in streakable.gemspec, build the gem with `gem build streakable.gemspec`. Commit your changes and push to Github, then tag the commit with the current release number using Github's Releases interface (use the format vx.x.x, where x is the semantic version number). You can pull the latest tags to your local repo with `git pull --tags`. Finally, push the gem with `gem push streakable-version-number-here.gem`.
+
+
 ## Contributing
 
 1. Fork it
