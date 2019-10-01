@@ -16,7 +16,7 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or install it directly with:
 
     $ gem install streakable
 
